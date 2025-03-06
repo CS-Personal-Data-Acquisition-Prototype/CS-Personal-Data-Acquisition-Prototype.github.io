@@ -1,3 +1,6 @@
+# Ignore mkdocs build results
+site/
+
 # Logs
 logs
 *.log

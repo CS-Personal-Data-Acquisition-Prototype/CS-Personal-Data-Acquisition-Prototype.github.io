@@ -1,0 +1,4 @@
+site_name: CS Personal Data Acquision Device
+nav:
+  - Home: index.md
+theme: material

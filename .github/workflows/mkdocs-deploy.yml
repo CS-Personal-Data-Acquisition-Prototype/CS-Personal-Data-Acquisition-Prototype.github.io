@@ -38,7 +38,7 @@ jobs:
           python-version: 3.9
 
       - name: Install Dependencies
-        run: pip install mkdocs
+        run: pip install mkdocs mkdocs-material
 
       - name: Run mkdocs gh-deploy
         run: mkdocs gh-deploy
