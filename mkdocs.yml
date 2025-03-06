@@ -1,4 +1,4 @@
-site_name: CS Personal Data Acquision Device
+site_name: CS Personal Data Acquision Prototype
 nav:
   - Home: index.md
 theme: material
