@@ -5,6 +5,7 @@ Project Frontend Website generated with mkdocs.
 The project is built by github pages on merge with main, you should only be pushing markdown (\*.md) files to this repo!
 
 [Reference for working with mkdocs](https://www.mkdocs.org/user-guide/writing-your-docs/)
+[Reference for working with mkdocs-material](https://squidfunk.github.io/mkdocs-material/reference/)
 
 ## Local Build
 
