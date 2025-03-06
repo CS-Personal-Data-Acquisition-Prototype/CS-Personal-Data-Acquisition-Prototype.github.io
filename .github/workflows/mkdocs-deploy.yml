@@ -41,7 +41,7 @@ jobs:
         run: pip install mkdocs mkdocs-material
 
       - name: Run mkdocs gh-deploy
-        run: mkdocs gh-deploy
+        run: mkdocs gh-deploy --force
 
   deploy-mkdocs:
     needs: build-mkdocs
