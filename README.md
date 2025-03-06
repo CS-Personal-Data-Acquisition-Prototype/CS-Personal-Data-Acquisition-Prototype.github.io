@@ -17,7 +17,7 @@ The project is built by github pages on merge with main, you should only be push
 
 ```bash
 # Install mkdocs
-pip install mkdocs
+pip install mkdocs mkdocs-material
 ```
 
 ### Build Options
