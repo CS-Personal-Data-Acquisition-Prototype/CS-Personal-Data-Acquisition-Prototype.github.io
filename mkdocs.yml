@@ -1,4 +1,5 @@
 site_name: CS Personal Data Acquision Prototype
 nav:
   - Home: index.md
+  - Repositories: repositories.md
 theme: material
