@@ -1,20 +1,20 @@
 # Important Repositories
 ---
-## Rust-TCP
-https://github.com/CS-Personal-Data-Acquisition-Prototype/Rust-Tcp
+## <a href="https://github.com/CS-Personal-Data-Acquisition-Prototype/Rust-Tcp" target="_blank">Rust-TCP</a>
+
 - AWS-Based Serves for the project.
 - Also serves user web client.
 
-## Pi\_TCP
-https://github.com/CS-Personal-Data-Acquisition-Prototype/Pi_TCP
+## <a href="https://github.com/CS-Personal-Data-Acquisition-Prototype/Pi_TCP" target="_blank">Pi_TCP</a>
+
 - Parses incoming data into SQLite database on the Pi
 
-## Pi\_Transmit
-https://github.com/CS-Personal-Data-Acquisition-Prototype/Pi_Transmit
+## <a href="https://github.com/CS-Personal-Data-Acquisition-Prototype/Pi_Transmit" target="_blank">Pi_Transmit</a>
+
 - Transmits the local SQLite database to the AWS-based services.
 
-## UI-Layer
-https://github.com/CS-Personal-Data-Acquisition-Prototype/UI-Layer
+## <a href="https://github.com/CS-Personal-Data-Acquisition-Prototype/UI-Layer" target="_blank">UI-Layer</a>
+
 - User web client frontend
 
 <!-- These descriptions need expanded -->
