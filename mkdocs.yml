@@ -2,4 +2,33 @@ site_name: CS Personal Data Acquision Prototype
 nav:
   - Home: index.md
   - Repositories: repositories.md
-theme: material
+# repo_url: https://github.com/CS-Personal-Data-Acquisition-Prototype/CS-Personal-Data-Acquisition-Prototype.github.io
+repo_url: https://github.com/CS-Personal-Data-Acquisition-Prototype
+repo_name: CS-Personal-Data-Acquisition-Prototype
+copyright: "Copyright &copy; 2025 CS 46X Personal Data Acquisition Prototype Group"
+theme:
+  name: material
+  palette:
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep orange
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep orange
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+  features:
+    - search.suggest
+    - search.highlight
+    - search.share
+  icon:
+    repo: fontawesome/brands/github
