@@ -22,13 +22,13 @@ Our project will fill the void between the professional and DIY data acquisition
 - Feipeng Yue (Winter 2025 TA)  
 - ECE 44X Team  
 - Group Members  
-  - Bradley Tyler  
-  - Colby Noah  
-  - Garrett McMichael  
-  - Joey Abruzzo  
-  - Lisa Young  
-  - Max Goldstein  
-  - Morgan Padberg
+    - Bradley Tyler  
+    - Colby Noah  
+    - Garrett McMichael  
+    - Joey Abruzzo  
+    - Lisa Young  
+    - Max Goldstein  
+    - Morgan Padberg
 
 Chris Patton is carrying out the role of project partner. He has stated that he will be able to provide us with previous years’ GitHub repositories, testing data for our prototype, and some amount of contact with the Global Formula Racing club at OSU. He has provided us with a basic framework for how our prototype should function, as well as constraints in the form of a preferred programming language (Rust). Chris Patton and the teaching team for this project (Alex Ulbrich, Kirsten Winters, and Casey) all have a stake in this project due to the time that they are investing in it. For the project partner, this investment may extend to a financial one.
 
@@ -65,13 +65,13 @@ Getting realistic test data and access points to the data logger require us to b
 - Oregon State University’s Global Formula Racing team currently uses [Vector](https://www.vector.com/us/en/) for data collection  
   - High cost ([https://www.ebay.com/itm/324655452701](https://www.ebay.com/itm/324655452701))   
 - [Dragy](https://dragymotorsports.com/) GPS data logger popular with vehicle tuners  
-  - Corresponding mobile app has a rating of 1.1 stars on the App Store, with users reporting that the performance report and other features do not load properly  
-  - High cost  
-    - GPS and performance recorder is $229.00  
-    - Company promotes accessories that cost up to $39.50  
+    - Corresponding mobile app has a rating of 1.1 stars on the App Store, with users reporting that the performance report and other features do not load properly  
+    - High cost  
+        - GPS and performance recorder is $229.00  
+        - Company promotes accessories that cost up to $39.50  
 - JB Data Engineering  
-  - $3350 entry point  
-  - High technical knowledge required to install
+    - $3350 entry point  
+    - High technical knowledge required to install
 
 ## **2.5 Target Demographics**
 
@@ -103,12 +103,12 @@ The ideal target demographic for this project would be hobbyist or low-level pro
 ## **3.3 Data Requirements**
 
 - Data should be collected from a variety of sensors and may include:  
-  - Accelerometer  
-  - Yaw Rate  
-  - GPS  
-  - Force transducer  
-  - Linear potentiometer  
-  - String potentiometer  
+    - Accelerometer  
+    - Yaw Rate  
+    - GPS  
+    - Force transducer  
+    - Linear potentiometer  
+    - String potentiometer  
 - Data should be stored locally, then transmitted wirelessly and stored in database  
 - Data must be filtered in order to provide accurate information
 
@@ -118,9 +118,9 @@ The ideal target demographic for this project would be hobbyist or low-level pro
 ## **3.4 Integration Requirements**
 
 - Rust will be used for the embedded software to capture the data and prepare it to be sent to the external database  
-  - Data formatting  
-  - Error handling  
-  - Local data storage  
+    - Data formatting  
+    - Error handling  
+    - Local data storage  
 - A remote database will store the data collected by the tracker and also be used to retrieve the data as it is displayed on the user interface
 
 ## **3.5 User Interaction and Design**
