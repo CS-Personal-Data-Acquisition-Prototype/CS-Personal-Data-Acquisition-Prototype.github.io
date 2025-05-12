@@ -1,6 +1,7 @@
 site_name: CS Personal Data Acquision Prototype
 nav:
   - Home: index.md
+  - Project Overview: overview.md
   - Repositories: repositories.md
   - Acknowledgements: acknowledgements.md
 # repo_url: https://github.com/CS-Personal-Data-Acquisition-Prototype/CS-Personal-Data-Acquisition-Prototype.github.io
