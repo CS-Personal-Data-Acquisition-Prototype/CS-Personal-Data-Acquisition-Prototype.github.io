@@ -3,6 +3,9 @@ nav:
   - Home: index.md
   - Project Overview: overview.md
   - Repositories: repositories.md
+  - Documentation:
+    - Design Document: design.md
+    - Requirements Document: specification.md
   - Acknowledgements: acknowledgements.md
 # repo_url: https://github.com/CS-Personal-Data-Acquisition-Prototype/CS-Personal-Data-Acquisition-Prototype.github.io
 repo_url: https://github.com/CS-Personal-Data-Acquisition-Prototype
@@ -10,6 +13,9 @@ repo_name: CS-Personal-Data-Acquisition-Prototype
 copyright: "Copyright &copy; 2025 CS 46X Personal Data Acquisition Prototype Group"
 theme:
   name: material
+  font:
+    text: Roboto
+    code: Roboto Mono
   palette:
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
