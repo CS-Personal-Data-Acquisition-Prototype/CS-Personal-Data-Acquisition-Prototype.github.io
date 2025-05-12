@@ -1,9 +1,9 @@
 
 # Overview
 
-## Description
+**An Affordable data acquisition system with cellular connectivity, providing low-latency personal performance data, in the palm of your hand.**
 
-An Affordable data acquisition system with cellular connectivity, providing low-latency personal performance data, in the palm of your hand.
+Our CompSci Capstone team is partnering with an ECE team to develop a complete sensor data acquisition device. With the ECE team's hardware sensors providing us data, we're sending data with an LTE-capable platform to an online backend. This is all accessible from our online, web-based client.
 
 ## Project Core
 
@@ -26,6 +26,15 @@ An Affordable data acquisition system with cellular connectivity, providing low-
 - Cost effective, around $500
 - Single Purchase Product (Pi w/ sensors)
 - User friendly interface for non-experts
+
+### The Communications Module
+
+- The Raspberry Pi 5 provides a high-performance Linux environment to run Rust programs similar to a full PC while also allowing an LTE module to be mounted via a HAT.
+- A power delivery circuit allows most off-the-shelf USB-C power sources to provide enough current for the Pi.
+- The data is gathered from a collection of sensors containing GPS, force, string, linear, and 9 degrees of freedom sensor.
+- The sensors record and transmit at 100 hz for high precision which produces 5.8 KB/second with future compression possibilities.
+- With constant 24 hour use the sensors produce about 348 KB/min, 20.9 MB/hour, 501 MB/day, 3.5 GB/week, or 15 GB/month.
+
 
 ### Technical Highlights
 
