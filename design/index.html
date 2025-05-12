@@ -9,6 +9,10 @@
       
       
       
+        <link rel="prev" href="../repositories/">
+      
+      
+        <link rel="next" href="../specification/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -16,7 +20,7 @@
     
     
       
-        <title>Design - CS Personal Data Acquision Prototype</title>
+        <title>Design Document - CS Personal Data Acquision Prototype</title>
       
     
     
@@ -37,8 +41,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Ubuntu";--md-code-font:"Roboto Mono"}</style>
       
     
     
@@ -104,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Design
+              Design Document
             
           </span>
         </div>
@@ -306,12 +310,488 @@
   
   
   <span class="md-ellipsis">
-    Repositories
+    Codebase Repositories
     
   </span>
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Documentation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Design Document
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Design Document
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#design-document-capstone-2025-cs026-personal-data-acquisition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design Document Capstone 2025 CS.026 Personal Data Acquisition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Introduction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-goals-and-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Goals and Principles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-technologies-frameworks-and-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Technologies, Frameworks, and Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3 Technologies, Frameworks, and Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-ui-layer-frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.1 UI Layer - Frontend
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-business-logic-layer-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.2 Business Logic Layer - Backend
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133-data-access-layer-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.3 Data Access Layer - Database
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#134-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.4 Hardware
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-core-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Core Components
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Core Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-user-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 User Interface
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 User Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#211-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.1 Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-low-fidelity-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.2 Low-Fidelity Design
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213-high-fidelity-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.3 High-Fidelity Design
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-authentication-and-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Authentication and Security
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Hardware
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-data-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Data Architecture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Data Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-abstracted-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Abstracted APIs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-er-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 ER Diagram
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-data-flow-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Data Flow Diagram
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-testing-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Testing Strategies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-optimizing-system-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Optimizing System Performance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-planning-for-maintenance-and-long-term-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Planning for Maintenance and Long-Term Support
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2 Planning for Maintenance and Long-Term Support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#521-maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.1 Maintenance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#522-scalability" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.2 Scalability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#523-user-support-and-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.3 User Support and Documentation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-programming-style-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Programming Style Guide
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Programming Style Guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-naming-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 Naming Conventions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-spacing-and-indentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 Spacing and Indentation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 Comments
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4 HTML
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-rustfmt" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5 rustfmt
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Requirements Document
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -726,7 +1206,7 @@
   
 
 
-<h2 id="design-document-capstone-2025-cs026-personal-data-acquisition">Design Document Capstone 2025 CS.026 Personal Data Acquisition</h2>
+<h2 id="design-document-capstone-2025-cs026-personal-data-acquisition"><strong>Design Document Capstone 2025 CS.026 Personal Data Acquisition</strong></h2>
 <h1 id="1-overview">1. Overview</h1>
 <h2 id="11-introduction">1.1 Introduction</h2>
 <p>In the field of data acquisition, there exists a significant gap between high-cost professional solutions and low-budget DIY alternatives. Our project aims to bridge this gap by developing an easy-to-use, low-cost, modular system designed to accommodate a diverse range of needs. This document provides an in-depth overview of the architectural decisions we’ve made to help guide our system development. By prioritizing affordability, flexibility, and modularity, we will offer a solution that lowers the barriers into the data acquisition field.</p>
