@@ -2,7 +2,7 @@ site_name: CS Personal Data Acquision Prototype
 nav:
   - Home: index.md
   - Project Overview: overview.md
-  - Repositories: repositories.md
+  - Codebase Repositories: repositories.md
   - Documentation:
     - Design Document: design.md
     - Requirements Document: specification.md
@@ -14,7 +14,7 @@ copyright: "Copyright &copy; 2025 CS 46X Personal Data Acquisition Prototype Gro
 theme:
   name: material
   font:
-    text: Roboto
+    text: Ubuntu
     code: Roboto Mono
   palette:
     # Palette toggle for dark mode
