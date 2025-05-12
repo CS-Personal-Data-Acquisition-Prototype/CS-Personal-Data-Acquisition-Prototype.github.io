@@ -1,4 +1,4 @@
-## Design Document Capstone 2025 CS.026 Personal Data Acquisition
+## **Design Document Capstone 2025 CS.026 Personal Data Acquisition**
 
 # 1\. Overview
 
