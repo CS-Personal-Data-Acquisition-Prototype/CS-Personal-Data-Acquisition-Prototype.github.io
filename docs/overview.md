@@ -1,14 +1,18 @@
 
 # Overview
 
+## Description
+
+An Affordable data acquisition system with cellular connectivity, providing low-latency personal performance data, in the palm of your hand.
+
 ## Project Core
 
 ### The Problem
 
-- Current solutions are expensive at $5,000+
-- Many individual parts
-- Complex interfaces
-- Steep learning curve
+- Current solutions are expensive, at $5,000+.
+- There are often many individual parts.
+- Too the average layman, interfaces are too complex.
+- A steep learning curve is often required to use current solutions effectively.
 
 ### Target Users
 
