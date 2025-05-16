@@ -686,8 +686,8 @@
 <h3 id="pi_forwarder"><a href="https://github.com/CS-Personal-Data-Acquisition-Prototype/Pi_Forwarder" target="_blank">Pi_Forwarder</a></h3>
 <ul>
 <li>Reads ECE sensor data through serial ports or network websockets.</li>
-<li>Immediately zero-copy forwards that data to any connected clients in parallel utilizing websockets.</li>
-<li>Immediately stores recieved data in a local SQLite database.</li>
+<li>Zero-copy forwards that data to any connected clients in parallel utilizing websockets.</li>
+<li>Stores recieved data in a local SQLite database.</li>
 <li>Batch transmits local SQLite3 database to Rust-TCP.</li>
 <li>Efficiently deletes transmitted data by utilizing database transactions.</li>
 </ul>
