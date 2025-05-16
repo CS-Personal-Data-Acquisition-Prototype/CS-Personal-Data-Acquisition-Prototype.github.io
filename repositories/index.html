@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.13">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -383,9 +383,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pi_tcp" class="md-nav__link">
+  <a href="#mock_data" class="md-nav__link">
     <span class="md-ellipsis">
-      Pi_TCP
+      Mock_Data
     </span>
   </a>
   
@@ -395,6 +395,15 @@
   <a href="#pi_transmit" class="md-nav__link">
     <span class="md-ellipsis">
       Pi_Transmit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pi_forwarder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pi_Forwarder
     </span>
   </a>
   
@@ -590,9 +599,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pi_tcp" class="md-nav__link">
+  <a href="#mock_data" class="md-nav__link">
     <span class="md-ellipsis">
-      Pi_TCP
+      Mock_Data
     </span>
   </a>
   
@@ -602,6 +611,15 @@
   <a href="#pi_transmit" class="md-nav__link">
     <span class="md-ellipsis">
       Pi_Transmit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pi_forwarder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pi_Forwarder
     </span>
   </a>
   
@@ -648,23 +666,36 @@
 <p>The following are our most important repositories:</p>
 <h3 id="rust-tcp"><a href="https://github.com/CS-Personal-Data-Acquisition-Prototype/Rust-Tcp" target="_blank">Rust-TCP</a></h3>
 <ul>
-<li>AWS-Based Service for the project.</li>
-<li>Also serves user web client.</li>
+<li>Remote TCP server facilitating inter-project communication between repositories.</li>
+<li>Holds historical data in an integrated SQLite3 database.</li>
+<li>Serves egui web client to user devices.</li>
+<li>Hosted on AWS for the project.</li>
 </ul>
 <hr />
-<h3 id="pi_tcp"><a href="https://github.com/CS-Personal-Data-Acquisition-Prototype/Pi_TCP" target="_blank">Pi_TCP</a></h3>
+<h3 id="mock_data"><a href="https://github.com/CS-Personal-Data-Acquisition-Prototype/Mock-Data" target="_blank">Mock_Data</a></h3>
 <ul>
-<li>Parses incoming data into SQLite database on the Pi</li>
+<li>Generates mock ECE data at 100Hz.</li>
+<li>Transmits the generated data through websockets.</li>
 </ul>
 <hr />
 <h3 id="pi_transmit"><a href="https://github.com/CS-Personal-Data-Acquisition-Prototype/Pi_Transmit" target="_blank">Pi_Transmit</a></h3>
 <ul>
-<li>Transmits the local SQLite database to the AWS-based services.</li>
+<li>Connects to a local SQLite3 database to transmit batches of stored data to Rust-TCP.</li>
+</ul>
+<hr />
+<h3 id="pi_forwarder"><a href="https://github.com/CS-Personal-Data-Acquisition-Prototype/Pi_Forwarder" target="_blank">Pi_Forwarder</a></h3>
+<ul>
+<li>Reads ECE sensor data through serial ports or network websockets.</li>
+<li>Immediately zero-copy forwards that data to any connected clients in parallel utilizing websockets.</li>
+<li>Immediately stores recieved data in a local SQLite database.</li>
+<li>Batch transmits local SQLite3 database to Rust-TCP.</li>
+<li>Efficiently deletes transmitted data by utilizing database transactions.</li>
 </ul>
 <hr />
 <h3 id="ui-layer"><a href="https://github.com/CS-Personal-Data-Acquisition-Prototype/UI-Layer" target="_blank">UI-Layer</a></h3>
 <ul>
-<li>User web client frontend</li>
+<li>Cross-platform web client frontend.</li>
+<li>Immediate mode rendering utilizing egui.</li>
 </ul>
 <!-- These descriptions need expanded -->
 
