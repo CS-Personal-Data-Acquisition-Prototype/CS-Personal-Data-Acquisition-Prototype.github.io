@@ -83,7 +83,7 @@ UI Crate
 
 ---
 
-### Morgan Padberg
+### Morgan
 **Responsibilities:**<br>
 Team Meeting Organizer<br>
 Database Schema<br>
