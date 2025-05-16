@@ -13,6 +13,7 @@ Our CompSci Capstone team is partnering with an ECE team to develop a complete s
 - There are often many individual parts.
 - Too the average layman, interfaces are too complex.
 - A steep learning curve is often required to use current solutions effectively.
+- Comparison with existing solutions can be found in the [requirements](specification.md##2.4-Market-Assessment-and-Competition) document.
 
 ### Target Users
 
@@ -26,6 +27,7 @@ Our CompSci Capstone team is partnering with an ECE team to develop a complete s
 - Cost effective, around $500
 - Single Purchase Product (Pi w/ sensors)
 - User friendly interface for non-experts
+- Key technologies can be found in the [design](design.md##1.3-Technologies-Frameworks-and-Patterns) document.
 
 ### The Communications Module
 
