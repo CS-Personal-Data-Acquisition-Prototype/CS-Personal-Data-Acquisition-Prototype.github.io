@@ -93,4 +93,4 @@ Project Website
 
 **Contact Information**<br>
 [padbergm@oregonstate.edu](mailto:padbergm@oregonstate.edu)<br>
-\[Excluded\]
+
