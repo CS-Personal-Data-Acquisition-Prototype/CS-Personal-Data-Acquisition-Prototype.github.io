@@ -6,6 +6,7 @@ nav:
   - Documentation:
     - Design Document: design.md
     - Requirements Document: specification.md
+    - API Specification Document: api_spec.md
   - Acknowledgements: acknowledgements.md
 # repo_url: https://github.com/CS-Personal-Data-Acquisition-Prototype/CS-Personal-Data-Acquisition-Prototype.github.io
 repo_url: https://github.com/CS-Personal-Data-Acquisition-Prototype
