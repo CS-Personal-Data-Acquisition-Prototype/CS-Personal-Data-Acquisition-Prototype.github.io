@@ -841,11 +841,11 @@
 </tr>
 </tbody>
 </table>
-<p>This cookie configuration:
-- Blocks JavaScript access.
-- Protects against CSRF attacks.
-- Expires after 1 hour.
-- Limits the cookie’s scope to the / path and the host domain.
+<p>This cookie configuration:<br>
+- Blocks JavaScript access.<br>
+- Protects against CSRF attacks.<br>
+- Expires after 1 hour.<br>
+- Limits the cookie’s scope to the / path and the host domain.<br>
 - Omits ‘Secure’ due to the implementation of custom encryption in place of HTTPS</p>
 <h2 id="54-passwords">5.4 Passwords</h2>
 <table>
@@ -1623,10 +1623,27 @@
 </table>
 <h3 id="response_9">Response</h3>
 <h4 id="creation-successful-201_1">Creation successful - 201</h4>
-<p>Type | Property | Description
---- | --- | --- | 
-String | id | Id of sensor
-String | type | Type of sensor</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>id</td>
+<td>Id of sensor</td>
+</tr>
+<tr>
+<td>String</td>
+<td>type</td>
+<td>Type of sensor</td>
+</tr>
+</tbody>
+</table>
 <h4 id="request-failed-400_5">Request failed - 400</h4>
 <table>
 <thead>
