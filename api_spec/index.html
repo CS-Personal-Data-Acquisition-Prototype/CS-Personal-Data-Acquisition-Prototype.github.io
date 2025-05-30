@@ -481,7 +481,7 @@
 <tr>
 <td>1.0</td>
 <td>05/30/2025</td>
-<td>Garrett McMuchael</td>
+<td>Garrett McMichael</td>
 <td>Updated session sensor data endpoints and added after datetime endpoint. Converted to markdown.</td>
 </tr>
 <tr>
@@ -1035,587 +1035,2069 @@
 <h2 id="71-login">7.1 Login</h2>
 <p>POST /authentication/login</p>
 <h3 id="request">Request</h3>
-<p>Type | Property | Description
----|---|---|
-String | username | Username of user
-String | password_hash | Hashed password of user</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>username</td>
+<td>Username of user</td>
+</tr>
+<tr>
+<td>String</td>
+<td>password_hash</td>
+<td>Hashed password of user</td>
+</tr>
+</tbody>
+</table>
 <h3 id="response">Response</h3>
 <h4 id="successful-201">Successful - 201</h4>
-<p>Type | Property | Description
----|---|---|
-Cookie | session_id | Id of session</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cookie</td>
+<td>session_id</td>
+<td>Id of session</td>
+</tr>
+</tbody>
+</table>
 <h4 id="request-failed-401">Request failed - 401</h4>
-<p>Type | Property | Description
----|---|---|
-String | error | Contains “Invalid authentication credentials”</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Contains “Invalid authentication credentials”</td>
+</tr>
+</tbody>
+</table>
 <h2 id="72-logout">7.2 Logout</h2>
 <p>POST /authentication/logout</p>
 <h3 id="request_1">Request</h3>
-<p>Type | Property | Description
----|---|---|
-Cookie | session_id | Id of session</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cookie</td>
+<td>session_id</td>
+<td>Id of session</td>
+</tr>
+</tbody>
+</table>
 <h3 id="response_1">Response</h3>
 <h4 id="successful-204">Successful - 204</h4>
-<p>Type | Property | Description
----|---|---|
-N/A | N/A | N/A</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
 <h4 id="unauthorized-404">Unauthorized - 404*</h4>
 <p>*No information is revealed by avoiding 403 unauthorized</p>
-<p>Type | Property | Description
----|---|---|
-String | error | Contains “Session not found”</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Contains “Session not found”</td>
+</tr>
+</tbody>
+</table>
 <h4 id="request-failed-400">Request failed - 400</h4>
-<p>Type | Property | Description
----|---|---|
-String | error | Description of request failure</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Description of request failure</td>
+</tr>
+</tbody>
+</table>
 <h2 id="73-renew-session">7.3 Renew Session</h2>
 <p>POST /authentication/renew</p>
 <h3 id="request_2">Request</h3>
-<p>Type | Property | Description
----|---|---|
-Cookie | session_id | Id of session</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cookie</td>
+<td>session_id</td>
+<td>Id of session</td>
+</tr>
+</tbody>
+</table>
 <h3 id="response_2">Response</h3>
 <h4 id="successful-201_1">Successful - 201</h4>
-<p>Type | Property | Description
----|---|---|
-Cookie | session_id | Id of session</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cookie</td>
+<td>session_id</td>
+<td>Id of session</td>
+</tr>
+</tbody>
+</table>
 <h4 id="unauthorized-404_1">Unauthorized - 404*</h4>
 <p>*No information is revealed by avoiding 403 unauthorized</p>
-<p>Type | Property | Description
----|---|---|
-String | error | Contains “Session not found”</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Contains “Session not found”</td>
+</tr>
+</tbody>
+</table>
 <h4 id="request-failed-400_1">Request failed - 400</h4>
-<p>Type | Property | Description
----|---|---|
-String | error | Description of request failure</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Description of request failure</td>
+</tr>
+</tbody>
+</table>
 <h1 id="8-user">8 User</h1>
 <h2 id="81-create-user">8.1 Create User</h2>
 <p>POST /users</p>
 <h3 id="request_3">Request</h3>
-<p>Type | Property | Description
----|---|---|
-String | username | Username of user
-String | password_hash | Hashed password of user</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>username</td>
+<td>Username of user</td>
+</tr>
+<tr>
+<td>String</td>
+<td>password_hash</td>
+<td>Hashed password of user</td>
+</tr>
+</tbody>
+</table>
 <h3 id="response_3">Response</h3>
 <h4 id="creation-successful-201">Creation successful - 201</h4>
-<p>Type | Property | Description
----|---|---|
-String | username | Username of user</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>username</td>
+<td>Username of user</td>
+</tr>
+</tbody>
+</table>
 <h4 id="request-failed-400_2">Request failed - 400</h4>
-<p>Type | Property | Description
----|---|---|
-String | error | Description of request failure</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Description of request failure</td>
+</tr>
+</tbody>
+</table>
 <h2 id="82-view-all-users">8.2 View All Users</h2>
 <p>GET /users</p>
 <h3 id="response_4">Response</h3>
 <h4 id="successful-200">Successful - 200</h4>
-<p>Type | Property | Description
----|---|---|
-Array | users | An array containing user usernames
-String | users[n] | Username of user</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Array</td>
+<td>users</td>
+<td>An array containing user usernames</td>
+</tr>
+<tr>
+<td>String</td>
+<td>users[n]</td>
+<td>Username of user</td>
+</tr>
+</tbody>
+</table>
 <h4 id="request-failed-400_3">Request failed - 400</h4>
-<p>Type | Property | Description
----|---|---|
-String | error | Description of request failure</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Description of request failure</td>
+</tr>
+</tbody>
+</table>
 <h4 id="request-unauthorized-403">Request unauthorized - 403</h4>
-<p>Type | Property | Description
----|---|---|
-String | error | Contains “User not authorized”</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Contains “User not authorized”</td>
+</tr>
+</tbody>
+</table>
 <h2 id="83-view-user-profile">8.3 View User Profile</h2>
 <p>GET /users/profile</p>
 <h3 id="request_4">Request</h3>
-<p>Type | Property | Description
----|---|---|
-Cookie | session_id | 128 bit session key provided by server</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cookie</td>
+<td>session_id</td>
+<td>128 bit session key provided by server</td>
+</tr>
+</tbody>
+</table>
 <h3 id="response_5">Response</h3>
 <h4 id="successful-200_1">Successful - 200</h4>
-<p>Type | Property | Description
----|---|---|
-String | username | Username of user</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>username</td>
+<td>Username of user</td>
+</tr>
+</tbody>
+</table>
 <h4 id="request-failed-404">Request failed - 404*</h4>
 <p>*No information is revealed by avoiding 403 unauthorized</p>
-<p>Type | Property | Description
----|---|---|
-String | error | Contains “User not found”</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Contains “User not found”</td>
+</tr>
+</tbody>
+</table>
 <h2 id="84-view-user-by-username">8.4 View User by Username</h2>
 <p>GET /users/{username}</p>
 <h3 id="response_6">Response</h3>
 <h4 id="successful-200_2">Successful - 200</h4>
-<p>Type | Property | Description
----|---|---|
-String | username | Username of user</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>username</td>
+<td>Username of user</td>
+</tr>
+</tbody>
+</table>
 <h4 id="request-failed-404_1">Request failed - 404*</h4>
 <p>*No information is revealed by avoiding 403 unauthorized</p>
-<p>Type | Property | Description
----|---|---|
-String | error | Contains “User not found”</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Contains “User not found”</td>
+</tr>
+</tbody>
+</table>
 <h2 id="85-update-user">8.5 Update User</h2>
 <p>PATCH /users/{username}</p>
 <h3 id="request_5">Request</h3>
-<p>Type | Property | Description
----|---|---|
-String | username | Username of user
-String | password_hash | Hashed password of user</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>username</td>
+<td>Username of user</td>
+</tr>
+<tr>
+<td>String</td>
+<td>password_hash</td>
+<td>Hashed password of user</td>
+</tr>
+</tbody>
+</table>
 <h3 id="response_7">Response</h3>
 <h4 id="successful-204_1">Successful - 204</h4>
-<p>Type | Property | Description
----|---|---|
-N/A | N/A | N/A</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
 <h4 id="unauthorized-404_2">Unauthorized - 404*</h4>
 <p>*No information is revealed by avoiding 403 unauthorized</p>
-<p>Type | Property | Description
----|---|---|
-String | error | Contains “User not found”</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Contains “User not found”</td>
+</tr>
+</tbody>
+</table>
 <h4 id="request-failed-400_4">Request failed - 400</h4>
-<p>Type | Property | Description
----|---|---|
-String | error | Description of request failure</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Description of request failure</td>
+</tr>
+</tbody>
+</table>
 <h2 id="86-delete-user">8.6 Delete User</h2>
 <p>DELETE /users/{username}</p>
 <h3 id="response_8">Response</h3>
 <h4 id="successful-204_2">Successful - 204</h4>
-<p>Type | Property | Description
----|---|---|
-N/A | N/A | N/A</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
 <h4 id="unauthorized-404_3">Unauthorized - 404*</h4>
 <p>*No information is revealed by avoiding 403 unauthorized</p>
-<p>Type | Property | Description
----|---|---|
-String | error | Contains “User not found”</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Contains “User not found”</td>
+</tr>
+</tbody>
+</table>
 <h1 id="9-sensor">9 Sensor</h1>
 <h2 id="91-create-sensor">9.1 Create Sensor</h2>
 <p>POST /sensors</p>
 <h3 id="request_6">Request</h3>
-<p>Type | Property | Description
----|---|---|
-String | type | Type of sensor</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>type</td>
+<td>Type of sensor</td>
+</tr>
+</tbody>
+</table>
 <h3 id="response_9">Response</h3>
 <h4 id="creation-successful-201_1">Creation successful - 201</h4>
 <p>Type | Property | Description
----|---|---|
+--- | --- | --- | 
 String | id | Id of sensor
 String | type | Type of sensor</p>
 <h4 id="request-failed-400_5">Request failed - 400</h4>
-<p>Type | Property | Description
----|---|---|
-String | error | Description of request failure</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Description of request failure</td>
+</tr>
+</tbody>
+</table>
 <h2 id="92-view-all-sensors">9.2 View All Sensors</h2>
 <p>GET /sensors</p>
 <h3 id="response_10">Response</h3>
 <h4 id="successful-200_3">Successful - 200</h4>
-<p>Type | Property | Description
----|---|---|
-Array | sensors | An array containing sensor id and types
-String | sensors[ ]. id | Id of sensor
-String | sensors[ ]. type | Type of sensor</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Array</td>
+<td>sensors</td>
+<td>An array containing sensor id and types</td>
+</tr>
+<tr>
+<td>String</td>
+<td>sensors[ ]. id</td>
+<td>Id of sensor</td>
+</tr>
+<tr>
+<td>String</td>
+<td>sensors[ ]. type</td>
+<td>Type of sensor</td>
+</tr>
+</tbody>
+</table>
 <h4 id="request-failed-400_6">Request failed - 400</h4>
-<p>Type | Property | Description
----|---|---|
-String | error | Description of request failure</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Description of request failure</td>
+</tr>
+</tbody>
+</table>
 <h4 id="request-unauthorized-403_1">Request unauthorized - 403</h4>
-<p>Type | Property | Description
----|---|---|
-String | error | Contains “User not authorized”</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Contains “User not authorized”</td>
+</tr>
+</tbody>
+</table>
 <h2 id="93-view-sensor-by-id">9.3 View Sensor by ID</h2>
 <p>GET /sensors/{id}</p>
 <h3 id="response_11">Response</h3>
 <h4 id="successful-200_4">Successful - 200</h4>
-<p>Type | Property | Description
----|---|---|
-String | id | Id of sensor
-String | type | Type of sensor</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>id</td>
+<td>Id of sensor</td>
+</tr>
+<tr>
+<td>String</td>
+<td>type</td>
+<td>Type of sensor</td>
+</tr>
+</tbody>
+</table>
 <h4 id="request-failed-404_2">Request failed - 404*</h4>
 <p>*No information is revealed by avoiding 403 unauthorized</p>
-<p>Type | Property | Description
----|---|---|
-String | error | Contains “Sensor not found”</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Contains “Sensor not found”</td>
+</tr>
+</tbody>
+</table>
 <h2 id="94-update-sensor">9.4 Update Sensor</h2>
 <p>PATCH /sensors/{id}</p>
 <h3 id="request_7">Request</h3>
-<p>Type | Property | Description
----|---|---|
-String | id | Id of sensor
-String | type | Type of sensor</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>id</td>
+<td>Id of sensor</td>
+</tr>
+<tr>
+<td>String</td>
+<td>type</td>
+<td>Type of sensor</td>
+</tr>
+</tbody>
+</table>
 <h3 id="response_12">Response</h3>
 <h4 id="successful-204_3">Successful - 204</h4>
-<p>Type | Property | 
-Description
----|
-N/A | N/A | N/A</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
 <h4 id="unauthorized-404_4">Unauthorized - 404*</h4>
 <p>*No information is revealed by avoiding 403 unauthorized</p>
-<p>Type | Property | Description
----|---|---|
-String | error | Contains “Sensor not found”</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Contains “Sensor not found”</td>
+</tr>
+</tbody>
+</table>
 <h4 id="request-failed-400_7">Request failed - 400</h4>
-<p>Type | Property | Description
----|---|---|
-String | error | Description of request failure</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Description of request failure</td>
+</tr>
+</tbody>
+</table>
 <h2 id="95-delete-sensor">9.5 Delete Sensor</h2>
 <p>DELETE /sensor/{id}</p>
 <h3 id="response_13">Response</h3>
 <h4 id="successful-204_4">Successful - 204</h4>
-<p>Type | Property | Description
----|---|---|
-N/A | N/A | N/A</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
 <h4 id="unauthorized-404_5">Unauthorized - 404*</h4>
 <p>*No information is revealed by avoiding 403 unauthorized</p>
-<p>Type | Property | Description
----|---|---|
-String | error | Contains “Sensor not found”</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Contains “Sensor not found”</td>
+</tr>
+</tbody>
+</table>
 <h1 id="10-session">10 Session</h1>
 <h2 id="101-create-session">10.1 Create Session</h2>
 <p>POST /sessions</p>
 <h3 id="request_8">Request</h3>
-<p>Type | Property | Description
----|---|---|
-String | username | Username of user</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>username</td>
+<td>Username of user</td>
+</tr>
+</tbody>
+</table>
 <h3 id="response_14">Response</h3>
 <h4 id="creation-successful-201_2">Creation successful - 201</h4>
-<p>Type | Property | Description
----|---|---|
-String | id | Id of session
-String | username | Username of user</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>id</td>
+<td>Id of session</td>
+</tr>
+<tr>
+<td>String</td>
+<td>username</td>
+<td>Username of user</td>
+</tr>
+</tbody>
+</table>
 <h4 id="request-failed-400_8">Request failed - 400</h4>
-<p>Type | Property | Description
----|---|---|
-String | error | Description of request failure</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Description of request failure</td>
+</tr>
+</tbody>
+</table>
 <h2 id="102-view-all-sessions">10.2 View All Sessions</h2>
 <p>GET /sessions</p>
 <h3 id="response_15">Response</h3>
 <h4 id="successful-200_5">Successful - 200</h4>
-<p>Type | Property | Description
----|---|---|
-Array | sessions | Array containing session id and linked user
-String | sessions[ ]. id | Id of session
-String | sessions[ ]. username | Username of user</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Array</td>
+<td>sessions</td>
+<td>Array containing session id and linked user</td>
+</tr>
+<tr>
+<td>String</td>
+<td>sessions[ ]. id</td>
+<td>Id of session</td>
+</tr>
+<tr>
+<td>String</td>
+<td>sessions[ ]. username</td>
+<td>Username of user</td>
+</tr>
+</tbody>
+</table>
 <h4 id="request-failed-400_9">Request failed - 400</h4>
-<p>Type | Property | Description
----|---|---|
-String | error | Description of request failure</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Description of request failure</td>
+</tr>
+</tbody>
+</table>
 <h3 id="request-unauthorized-403_2">Request unauthorized - 403</h3>
-<p>Type | Property | Description
----|---|---|
-String | error | Contains “User not authorized”</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Contains “User not authorized”</td>
+</tr>
+</tbody>
+</table>
 <h2 id="103-view-all-sessions-by-user">10.3 View All Sessions by User</h2>
 <p>GET /sessions/user/{username}</p>
 <h3 id="response_16">Response</h3>
 <h4 id="successful-200_6">Successful - 200</h4>
-<p>Type | Property | Description
----|---|---|
-Array | sessions | Array containing session id and linked user
-String | sessions[ ]. id | Id of session
-String | sessions[ ]. username | Username of user</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Array</td>
+<td>sessions</td>
+<td>Array containing session id and linked user</td>
+</tr>
+<tr>
+<td>String</td>
+<td>sessions[ ]. id</td>
+<td>Id of session</td>
+</tr>
+<tr>
+<td>String</td>
+<td>sessions[ ]. username</td>
+<td>Username of user</td>
+</tr>
+</tbody>
+</table>
 <h4 id="request-failed-400_10">Request failed - 400</h4>
-<p>Type | Property | Description
----|---|---|
-String | error | Description of request failure</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Description of request failure</td>
+</tr>
+</tbody>
+</table>
 <h4 id="request-failed-404_3">Request failed - 404*</h4>
 <p>*No information is revealed by avoiding 403 unauthorized</p>
-<p>Type | Property | Description
----|---|---|
-String | error | Contains “User not found”</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Contains “User not found”</td>
+</tr>
+</tbody>
+</table>
 <h2 id="104-view-session-by-id">10.4 View Session by ID</h2>
 <p>GET /sessions/id/{id}</p>
 <h3 id="response_17">Response</h3>
 <h4 id="successful-200_7">Successful - 200</h4>
-<p>Type | Property | Description
----|---|---|
-String | id | Id of session
-String | username | Username of user</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>id</td>
+<td>Id of session</td>
+</tr>
+<tr>
+<td>String</td>
+<td>username</td>
+<td>Username of user</td>
+</tr>
+</tbody>
+</table>
 <h4 id="request-failed-404_4">Request failed - 404*</h4>
 <p>*No information is revealed by avoiding 403 unauthorized</p>
-<p>Type | Property | Description
----|---|---|
-String | error | Contains “Session not found”</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Contains “Session not found”</td>
+</tr>
+</tbody>
+</table>
 <h2 id="105-update-session">10.5 Update Session</h2>
 <p>PATCH /sessions/{id}</p>
 <h3 id="request_9">Request</h3>
-<p>Type | Property | Description
----|---|---|
-String | id | Id of session
-String | username | Username of user</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>id</td>
+<td>Id of session</td>
+</tr>
+<tr>
+<td>String</td>
+<td>username</td>
+<td>Username of user</td>
+</tr>
+</tbody>
+</table>
 <h3 id="response_18">Response</h3>
 <h4 id="successful-204_5">Successful - 204</h4>
-<p>Type | Property | Description
----|---|---|
-N/A | N/A | N/A</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
 <h4 id="unauthorized-404_6">Unauthorized - 404*</h4>
 <p>*No information is revealed by avoiding 403 unauthorized</p>
-<p>Type | Property | Description
----|---|---|
-String | error | Contains “Session not found”</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Contains “Session not found”</td>
+</tr>
+</tbody>
+</table>
 <h4 id="request-failed-400_11">Request failed - 400</h4>
-<p>Type | Property | Description
----|---|---|
-String | error | Description of request failure</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Description of request failure</td>
+</tr>
+</tbody>
+</table>
 <h2 id="106-delete-session">10.6 Delete Session</h2>
 <p>DELETE /sessions/{id}</p>
 <h3 id="response_19">Response</h3>
 <h4 id="successful-204_6">Successful - 204</h4>
-<p>Type | Property | Description
----|---|---|
-N/A | N/A | N/A</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
 <h4 id="unauthorized-404_7">Unauthorized - 404*</h4>
 <p>*No information is revealed by avoiding 403 unauthorized</p>
-<p>Type | Property | Description
----|---|---|
-String | error | Contains “Session not found”</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Contains “Session not found”</td>
+</tr>
+</tbody>
+</table>
 <h1 id="11-session-sensor">11 Session Sensor</h1>
 <h2 id="111-create-session-sensor">11.1 Create Session Sensor</h2>
 <p>POST /sessions-sensors</p>
 <h3 id="request_10">Request</h3>
-<p>Type | Property | Description
----|---|---|
-String | session_id | Id of session
-String | sensor_id | Id of sensor</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>session_id</td>
+<td>Id of session</td>
+</tr>
+<tr>
+<td>String</td>
+<td>sensor_id</td>
+<td>Id of sensor</td>
+</tr>
+</tbody>
+</table>
 <h3 id="response_20">Response</h3>
 <h4 id="creation-successful-201_3">Creation successful - 201</h4>
-<p>Type | Property | Description
----|---|---|
-String | id | Id of session sensor
-String | session_id | Id of session
-String | sensor_id | Id of sensor</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>id</td>
+<td>Id of session sensor</td>
+</tr>
+<tr>
+<td>String</td>
+<td>session_id</td>
+<td>Id of session</td>
+</tr>
+<tr>
+<td>String</td>
+<td>sensor_id</td>
+<td>Id of sensor</td>
+</tr>
+</tbody>
+</table>
 <h4 id="request-failed-400_12">Request failed - 400</h4>
-<p>Type | Property | Description
----|---|---|
-String | error | Description of request failure</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Description of request failure</td>
+</tr>
+</tbody>
+</table>
 <h2 id="112-view-all-sessions-sensors">11.2 View All Sessions Sensors</h2>
 <p>GET /sessions-sensors</p>
 <h3 id="response_21">Response</h3>
 <h4 id="successful-200_8">Successful - 200</h4>
-<p>Type | Property | Description
----|---|---|
-Array | sessions_sensors | Array containing session id and linked sensor
-String | sessions_sensors[ ]. id | Id of session sensor
-String | sessions_sensors[ ]. session_id | Id of session
-String | sessions_sensors[ ]. sensor_id | Id of sensor</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Array</td>
+<td>sessions_sensors</td>
+<td>Array containing session id and linked sensor</td>
+</tr>
+<tr>
+<td>String</td>
+<td>sessions_sensors[ ]. id</td>
+<td>Id of session sensor</td>
+</tr>
+<tr>
+<td>String</td>
+<td>sessions_sensors[ ]. session_id</td>
+<td>Id of session</td>
+</tr>
+<tr>
+<td>String</td>
+<td>sessions_sensors[ ]. sensor_id</td>
+<td>Id of sensor</td>
+</tr>
+</tbody>
+</table>
 <h4 id="request-failed-400_13">Request failed - 400</h4>
-<p>Type | Property | Description
----|---|---|
-String | error | Description of request failure</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Description of request failure</td>
+</tr>
+</tbody>
+</table>
 <h4 id="request-unauthorized-403_3">Request unauthorized - 403</h4>
-<p>Type | Property | Description
----|---|---|
-String | error | Contains “User not authorized”</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Contains “User not authorized”</td>
+</tr>
+</tbody>
+</table>
 <h2 id="113-view-all-sensors-by-sessionid">11.3 View All Sensors by SessionID</h2>
 <p>GET /sessions-sensors/session/{session_id}</p>
 <h3 id="response_22">Response</h3>
 <h4 id="successful-200_9">Successful - 200</h4>
-<p>Type | Property | Description
----|---|---|
-Array | sessions_sensors | Array containing session id and linked sensor
-String | sessions_sensors[ ]. id | Id of session sensor
-String | sessions_sensors[ ]. session_id | Id of session
-String | sessions_sensors[ ]. sensor_id | Id of sensor</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Array</td>
+<td>sessions_sensors</td>
+<td>Array containing session id and linked sensor</td>
+</tr>
+<tr>
+<td>String</td>
+<td>sessions_sensors[ ]. id</td>
+<td>Id of session sensor</td>
+</tr>
+<tr>
+<td>String</td>
+<td>sessions_sensors[ ]. session_id</td>
+<td>Id of session</td>
+</tr>
+<tr>
+<td>String</td>
+<td>sessions_sensors[ ]. sensor_id</td>
+<td>Id of sensor</td>
+</tr>
+</tbody>
+</table>
 <h4 id="request-failed-400_14">Request failed - 400</h4>
-<p>Type | Property | Description
----|---|---|
-String | error | Description of request failure</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Description of request failure</td>
+</tr>
+</tbody>
+</table>
 <h4 id="request-failed-404_5">Request failed - 404*</h4>
 <p>*No information is revealed by avoiding 403 unauthorized</p>
-<p>Type | Property | Description
----|---|---|
-String | error | Contains “Session not found”</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Contains “Session not found”</td>
+</tr>
+</tbody>
+</table>
 <h2 id="114-view-session-sensor-by-id">11.4 View Session Sensor by ID</h2>
 <p>GET /sessions-sensors/session-sensor/{id}</p>
 <h3 id="response_23">Response</h3>
 <h4 id="successful-200_10">Successful - 200</h4>
-<p>Type | Property | Description
----|---|---|
-String | id | Id of session sensor
-String | session_id | Id of session
-String | sensor_id | Id of sensor</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>id</td>
+<td>Id of session sensor</td>
+</tr>
+<tr>
+<td>String</td>
+<td>session_id</td>
+<td>Id of session</td>
+</tr>
+<tr>
+<td>String</td>
+<td>sensor_id</td>
+<td>Id of sensor</td>
+</tr>
+</tbody>
+</table>
 <h4 id="request-failed-404_6">Request failed - 404*</h4>
 <p>*No information is revealed by avoiding 403 unauthorized</p>
-<p>Type | Property | Description
----|---|---|
-String | error | Contains “Session Sensor not found”</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Contains “Session Sensor not found”</td>
+</tr>
+</tbody>
+</table>
 <h2 id="115-update-session-sensor">11.5 Update Session Sensor</h2>
 <p>PATCH /sessions-sensors/{id}</p>
 <h3 id="request_11">Request</h3>
-<p>Type | Property | Description
----|---|---|
-String | id | Id of session sensor
-String | session_id | Id of session
-String | sensor_id | Id of sensor</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>id</td>
+<td>Id of session sensor</td>
+</tr>
+<tr>
+<td>String</td>
+<td>session_id</td>
+<td>Id of session</td>
+</tr>
+<tr>
+<td>String</td>
+<td>sensor_id</td>
+<td>Id of sensor</td>
+</tr>
+</tbody>
+</table>
 <h3 id="response_24">Response</h3>
 <h4 id="successful-204_7">Successful - 204</h4>
-<p>Type | Property | Description
----|---|---|
-N/A | N/A | N/A</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
 <h4 id="unauthorized-404_8">Unauthorized - 404*</h4>
 <p>*No information is revealed by avoiding 403 unauthorized</p>
-<p>Type | Property | Description
----|---|---|
-String | error | Contains “Session Sensor not found”</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Contains “Session Sensor not found”</td>
+</tr>
+</tbody>
+</table>
 <h4 id="request-failed-400_15">Request failed - 400</h4>
-<p>Type | Property | Description
----|---|---|
-String | error | Description of request failure</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Description of request failure</td>
+</tr>
+</tbody>
+</table>
 <h2 id="116-delete-session-sensor">11.6 Delete Session Sensor</h2>
 <p>DELETE /sessions-sensors/{id}</p>
 <h3 id="response_25">Response</h3>
 <h4 id="successful-204_8">Successful - 204</h4>
-<p>Type | Property | Description
----|---|---|
-N/A | N/A | N/A</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
 <h4 id="unauthorized-404_9">Unauthorized - 404*</h4>
 <p>*No information is revealed by avoiding 403 unauthorized</p>
-<p>Type | Property | Description
----|---|---|
-String | error | Contains “Session Sensor not found”</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Contains “Session Sensor not found”</td>
+</tr>
+</tbody>
+</table>
 <h1 id="12-session-sensor-data">12 Session Sensor Data</h1>
 <h2 id="121-create-datapoint">12.1 Create Datapoint</h2>
 <p>POST /sessions-sensors-data</p>
 <h3 id="request_12">Request</h3>
-<p>Type | Property | Description
----|---|---|
-String | id | Id of session sensor
-String | datetime | Time of datapoint recording
-JSON | data_blob | JSON string containing formatted sensor data</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>id</td>
+<td>Id of session sensor</td>
+</tr>
+<tr>
+<td>String</td>
+<td>datetime</td>
+<td>Time of datapoint recording</td>
+</tr>
+<tr>
+<td>JSON</td>
+<td>data_blob</td>
+<td>JSON string containing formatted sensor data</td>
+</tr>
+</tbody>
+</table>
 <h3 id="response_26">Response</h3>
 <h4 id="successful-204_9">Successful - 204</h4>
-<p>Type | Property | Description
----|---|---|
-N/A | N/A | N/A</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
 <h4 id="request-failed-400_16">Request failed - 400</h4>
-<p>Type | Property | Description
----|---|---|
-String | error | Description of request failure</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Description of request failure</td>
+</tr>
+</tbody>
+</table>
 <h2 id="122-batch-create-datapoint">12.2 Batch Create Datapoint</h2>
 <p>POST /sessions-sensors-data/batch</p>
 <h3 id="request_13">Request</h3>
-<p>Type | Property | Description
----|---|---|
-Array | datapoints | Array holding session sensor data objects
-String | datapoints[ ]. id | Id of session sensor
-String | datapoints[ ]. datetime | Time of datapoint recording
-JSON | datapoints[ ]. data_blob | JSON string containing formatted sensor data</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Array</td>
+<td>datapoints</td>
+<td>Array holding session sensor data objects</td>
+</tr>
+<tr>
+<td>String</td>
+<td>datapoints[ ]. id</td>
+<td>Id of session sensor</td>
+</tr>
+<tr>
+<td>String</td>
+<td>datapoints[ ]. datetime</td>
+<td>Time of datapoint recording</td>
+</tr>
+<tr>
+<td>JSON</td>
+<td>datapoints[ ]. data_blob</td>
+<td>JSON string containing formatted sensor data</td>
+</tr>
+</tbody>
+</table>
 <h3 id="response_27">Response</h3>
 <h4 id="successful-204_10">Successful - 204</h4>
-<p>Type | Property | Description
----|---|---|
-N/A | N/A | N/A</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
 <h4 id="request-failed-400_17">Request failed - 400</h4>
-<p>Type | Property | Description
----|---|---|
-String | error | Description of request failure</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Description of request failure</td>
+</tr>
+</tbody>
+</table>
 <h2 id="123-view-all-datapoints">12.3 View All Datapoints</h2>
 <p>GET /sessions-sensors-data</p>
 <h3 id="response_28">Response</h3>
 <h4 id="successful-200_11">Successful - 200</h4>
-<p>Type | Property | Description
----|---|---|
-Array | datapoints | Array holding session sensor data objects
-String | datapoints[ ]. id | Id of session sensor data
-String | datapoints[ ]. datetime | Time of datapoint recording
-JSON | datapoints[ ]. data_blob | JSON string containing formatted sensor data</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Array</td>
+<td>datapoints</td>
+<td>Array holding session sensor data objects</td>
+</tr>
+<tr>
+<td>String</td>
+<td>datapoints[ ]. id</td>
+<td>Id of session sensor data</td>
+</tr>
+<tr>
+<td>String</td>
+<td>datapoints[ ]. datetime</td>
+<td>Time of datapoint recording</td>
+</tr>
+<tr>
+<td>JSON</td>
+<td>datapoints[ ]. data_blob</td>
+<td>JSON string containing formatted sensor data</td>
+</tr>
+</tbody>
+</table>
 <h4 id="request-failed-400_18">Request failed - 400</h4>
-<p>Type | Property | Description
----|---|---|
-String | error | Description of request failure</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Description of request failure</td>
+</tr>
+</tbody>
+</table>
 <h4 id="request-unauthorized-403_4">Request unauthorized - 403</h4>
-<p>Type | Property | Description
----|---|---|
-String | error | Contains “User not authorized”</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Contains “User not authorized”</td>
+</tr>
+</tbody>
+</table>
 <h2 id="124-view-all-datapoints-by-sessionid">12.4 View All Datapoints by SessionID</h2>
 <p>GET /sessions-sensors-data/session/{session_id}</p>
 <h3 id="response_29">Response</h3>
 <h4 id="successful-200_12">Successful - 200</h4>
-<p>Type | Property | Description
----|---|---|
-Array | datapoints | Array holding session sensor data objects
-String | datapoints[ ]. id | Id of session sensor data
-String | datapoints[ ]. datetime | Time of datapoint recording
-JSON | datapoints[ ]. data_blob | JSON string containing formatted sensor data</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Array</td>
+<td>datapoints</td>
+<td>Array holding session sensor data objects</td>
+</tr>
+<tr>
+<td>String</td>
+<td>datapoints[ ]. id</td>
+<td>Id of session sensor data</td>
+</tr>
+<tr>
+<td>String</td>
+<td>datapoints[ ]. datetime</td>
+<td>Time of datapoint recording</td>
+</tr>
+<tr>
+<td>JSON</td>
+<td>datapoints[ ]. data_blob</td>
+<td>JSON string containing formatted sensor data</td>
+</tr>
+</tbody>
+</table>
 <h4 id="request-failed-400_19">Request failed - 400</h4>
-<p>Type | Property | Description
----|---|---|
-String | error | Description of request failure</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Description of request failure</td>
+</tr>
+</tbody>
+</table>
 <h4 id="request-failed-404_7">Request failed - 404*</h4>
 <p>*No information is revealed by avoiding 403 unauthorized</p>
-<p>Type | Property | Description
----|---|---|
-String | error | Contains “Session not found”</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Contains “Session not found”</td>
+</tr>
+</tbody>
+</table>
 <h2 id="124-view-all-datapoints-by-sessionid-after-datetime">12.4 View All Datapoints by SessionID after Datetime</h2>
 <p>GET /sessions-sensors-data/session/{session_id}/{datetime}</p>
 <h3 id="response_30">Response</h3>
 <h4 id="successful-200_13">Successful - 200</h4>
-<p>Type | Property | Description
----|---|---|
-Array | datapoints | Array holding session sensor data objects
-String | datapoints[ ]. id | Id of session sensor data
-String | datapoints[ ]. datetime | Time of datapoint recording
-JSON | datapoints[ ]. data_blob | JSON string containing formatted sensor data</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Array</td>
+<td>datapoints</td>
+<td>Array holding session sensor data objects</td>
+</tr>
+<tr>
+<td>String</td>
+<td>datapoints[ ]. id</td>
+<td>Id of session sensor data</td>
+</tr>
+<tr>
+<td>String</td>
+<td>datapoints[ ]. datetime</td>
+<td>Time of datapoint recording</td>
+</tr>
+<tr>
+<td>JSON</td>
+<td>datapoints[ ]. data_blob</td>
+<td>JSON string containing formatted sensor data</td>
+</tr>
+</tbody>
+</table>
 <h4 id="request-failed-404_8">Request failed - 404*</h4>
 <p>*No information is revealed by avoiding 403 unauthorized</p>
-<p>Type | Property | Description
----|---|---|
-String | error | Contains “{request path} not found”</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Contains “{request path} not found”</td>
+</tr>
+</tbody>
+</table>
 <h2 id="125-view-all-datapoints-by-session-sensor-id">12.5 View All Datapoints by Session Sensor ID</h2>
 <p>GET /sessions-sensors-data/id/{id}</p>
 <h3 id="response_31">Response</h3>
 <h4 id="successful-200_14">Successful - 200</h4>
-<p>Type | Property | Description
----|---|---|
-Array | datapoints | Array holding session sensor data objects
-String | datapoints[ ]. id | Id of session sensor data
-String | datapoints[ ]. datetime | Time of datapoint recording
-JSON | datapoints[ ]. data_blob | JSON string containing formatted sensor data</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Array</td>
+<td>datapoints</td>
+<td>Array holding session sensor data objects</td>
+</tr>
+<tr>
+<td>String</td>
+<td>datapoints[ ]. id</td>
+<td>Id of session sensor data</td>
+</tr>
+<tr>
+<td>String</td>
+<td>datapoints[ ]. datetime</td>
+<td>Time of datapoint recording</td>
+</tr>
+<tr>
+<td>JSON</td>
+<td>datapoints[ ]. data_blob</td>
+<td>JSON string containing formatted sensor data</td>
+</tr>
+</tbody>
+</table>
 <h4 id="request-failed-404_9">Request failed - 404*</h4>
 <p>*No information is revealed by avoiding 403 unauthorized</p>
-<p>Type | Property | Description
----|---|---|
-String | error | Contains “Session Sensor not found”</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Contains “Session Sensor not found”</td>
+</tr>
+</tbody>
+</table>
 <h2 id="126-view-datapoints-by-id-and-datetime">12.6 View Datapoints by ID and Datetime</h2>
 <p>GET /sessions-sensors-data/{id}/{datetime}</p>
 <h3 id="response_32">Response</h3>
 <h4 id="successful-200_15">Successful - 200</h4>
-<p>Type | Property | Description
----|---|---|
-String | id | Id of session sensor
-String | datetime | Time of datapoint recording
-JSON | data_blob | JSON string containing formatted sensor data</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>id</td>
+<td>Id of session sensor</td>
+</tr>
+<tr>
+<td>String</td>
+<td>datetime</td>
+<td>Time of datapoint recording</td>
+</tr>
+<tr>
+<td>JSON</td>
+<td>data_blob</td>
+<td>JSON string containing formatted sensor data</td>
+</tr>
+</tbody>
+</table>
 <h4 id="request-failed-404_10">Request failed - 404*</h4>
 <p>*No information is revealed by avoiding 403 unauthorized</p>
-<p>Type | Property | Description
----|---|---|
-String | error | Contains “Session Sensor not found”</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Contains “Session Sensor not found”</td>
+</tr>
+</tbody>
+</table>
 <h2 id="127-update-datapoint">12.7 Update Datapoint</h2>
 <p>PATCH /sessions-sensors-data/{id}/{datetime}</p>
 <h3 id="request_14">Request</h3>
-<p>Type | Property | Description
----|---|---|
-String | id | Id of session sensor
-String | datetime | Time of datapoint recording
-JSON | data_blob | JSON string containing formatted sensor data</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>id</td>
+<td>Id of session sensor</td>
+</tr>
+<tr>
+<td>String</td>
+<td>datetime</td>
+<td>Time of datapoint recording</td>
+</tr>
+<tr>
+<td>JSON</td>
+<td>data_blob</td>
+<td>JSON string containing formatted sensor data</td>
+</tr>
+</tbody>
+</table>
 <h3 id="response_33">Response</h3>
 <h4 id="successful-204_11">Successful - 204</h4>
-<p>Type | Property | Description
----|---|---|
-N/A | N/A | N/A</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
 <h4 id="unauthorized-404_10">Unauthorized - 404*</h4>
 <p>*No information is revealed by avoiding 403 unauthorized</p>
-<p>Type | Property | Description
----|---|---|
-String | error | Contains “Session Sensor not found”</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Contains “Session Sensor not found”</td>
+</tr>
+</tbody>
+</table>
 <h4 id="request-failed-400_20">Request failed - 400</h4>
-<p>Type | Property | Description
----|---|---|
-String | error | Description of request failure</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Description of request failure</td>
+</tr>
+</tbody>
+</table>
 <h2 id="128-delete-datapoint">12.8 Delete Datapoint</h2>
 <p>DELETE /sessions-sensors-data/{id}/{datetime}</p>
 <h3 id="response_34">Response</h3>
 <h4 id="successful-204_12">Successful - 204</h4>
-<p>Type | Property | Description
----|---|---|
-N/A | N/A | N/A</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
 <h4 id="unauthorized-404_11">Unauthorized - 404*</h4>
 <p>*No information is revealed by avoiding 403 unauthorized</p>
-<p>Type | Property | Description
----|---|---|
-String | error | Contains “Session Sensor not found”</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>error</td>
+<td>Contains “Session Sensor not found”</td>
+</tr>
+</tbody>
+</table>
 
 
 
