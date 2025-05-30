@@ -82,7 +82,7 @@ UI Crate
 
 ---
 
-### Morgan Padberg
+### Morgan
 **Responsibilities:**<br>
 Team Meeting Organizer<br>
 Database Schema<br>
@@ -92,5 +92,4 @@ Project Website
 
 **Contact Information**<br>
 [padbergm@oregonstate.edu](mailto:padbergm@oregonstate.edu)<br>
-[GitHub@Statdk](https://github.com/Statdk)
 
