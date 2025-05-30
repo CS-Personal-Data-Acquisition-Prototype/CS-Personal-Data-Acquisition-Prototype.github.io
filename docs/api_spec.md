@@ -4,7 +4,7 @@
 
 Version | Date | Author | Change Description
 --- | --- | --- | ---
-1.0 | 05/30/2025 | Garrett McMuchael | Updated session sensor data endpoints and added after datetime endpoint. Converted to markdown.
+1.0 | 05/30/2025 | Garrett McMichael | Updated session sensor data endpoints and added after datetime endpoint. Converted to markdown.
 0.3 | 01/26/2025 | Lisa Young | Changed password hash & added password section
 0.2 | 01/24/2025 | Garrett McMichael | Added numbering & security/auth sections
 0.1 | 01/19/2025 | Garrett McMichael | Initial DL API specification creation
@@ -214,7 +214,7 @@ DELETE /sessions-sensors/{id} | Delete a session sensor linkage by id
 ## 6.6 Session Sensor Data
 
 Endpoint | Description
----|---
+--- | ---
 POST /sessions-sensors-data | Create a new datapoint
 POST /sessions-sensors-data/batch | Batch create new datapoints
 GET /sessions-sensors-data | Get all datapoints
@@ -233,7 +233,7 @@ POST /authentication/login
 ### Request
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | username | Username of user
 String | password_hash | Hashed password of user
 
@@ -241,13 +241,13 @@ String | password_hash | Hashed password of user
 #### Successful - 201
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 Cookie | session_id | Id of session
 
 #### Request failed - 401
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Contains “Invalid authentication credentials”
 
 ## 7.2 Logout
@@ -256,27 +256,27 @@ POST /authentication/logout
 ### Request
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 Cookie | session_id | Id of session
 
 ### Response
 #### Successful - 204
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 N/A | N/A | N/A
 
 #### Unauthorized - 404*
 *No information is revealed by avoiding 403 unauthorized
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Contains “Session not found”
 
 #### Request failed - 400
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Description of request failure
 
 ## 7.3 Renew Session
@@ -285,27 +285,27 @@ POST /authentication/renew
 ### Request
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 Cookie | session_id | Id of session
 
 ### Response
 #### Successful - 201
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 Cookie | session_id | Id of session
 
 #### Unauthorized - 404*
 *No information is revealed by avoiding 403 unauthorized
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Contains “Session not found”
 
 #### Request failed - 400
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Description of request failure
 
 # 8 User
@@ -315,7 +315,7 @@ POST /users
 ### Request
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | username | Username of user
 String | password_hash | Hashed password of user
 
@@ -323,13 +323,13 @@ String | password_hash | Hashed password of user
 #### Creation successful - 201
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | username | Username of user
 
 #### Request failed - 400
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Description of request failure
 
 ## 8.2 View All Users
@@ -339,20 +339,20 @@ GET /users
 #### Successful - 200
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 Array | users | An array containing user usernames
 String | users[n] | Username of user
 
 #### Request failed - 400
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Description of request failure
 
 #### Request unauthorized - 403
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Contains “User not authorized”
 
 ## 8.3 View User Profile
@@ -361,21 +361,21 @@ GET /users/profile
 ### Request
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 Cookie | session_id | 128 bit session key provided by server
 
 ### Response
 #### Successful - 200
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | username | Username of user
 
 #### Request failed - 404*
 *No information is revealed by avoiding 403 unauthorized
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Contains “User not found”
 
 ## 8.4 View User by Username
@@ -385,14 +385,14 @@ GET /users/{username}
 #### Successful - 200
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | username | Username of user
 
 #### Request failed - 404*
 *No information is revealed by avoiding 403 unauthorized
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Contains “User not found”
 
 ## 8.5 Update User
@@ -401,7 +401,7 @@ PATCH /users/{username}
 ### Request
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | username | Username of user
 String | password_hash | Hashed password of user
 
@@ -409,20 +409,20 @@ String | password_hash | Hashed password of user
 #### Successful - 204
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 N/A | N/A | N/A
 
 #### Unauthorized - 404*
 *No information is revealed by avoiding 403 unauthorized
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Contains “User not found”
 
 #### Request failed - 400
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Description of request failure
 
 ## 8.6 Delete User
@@ -432,14 +432,14 @@ DELETE /users/{username}
 #### Successful - 204
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 N/A | N/A | N/A
 
 #### Unauthorized - 404*
 *No information is revealed by avoiding 403 unauthorized
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Contains “User not found”
 
 # 9 Sensor
@@ -450,21 +450,21 @@ POST /sensors
 ### Request
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | type | Type of sensor
 
 ### Response
 #### Creation successful - 201
 
 Type | Property | Description
----|---|---|
+--- | --- | --- | 
 String | id | Id of sensor
 String | type | Type of sensor
 
 #### Request failed - 400
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Description of request failure
 
 ## 9.2 View All Sensors
@@ -474,7 +474,7 @@ GET /sensors
 #### Successful - 200
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 Array | sensors | An array containing sensor id and types
 String | sensors[ ]. id | Id of sensor
 String | sensors[ ]. type | Type of sensor
@@ -482,13 +482,13 @@ String | sensors[ ]. type | Type of sensor
 #### Request failed - 400
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Description of request failure
 
 #### Request unauthorized - 403
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Contains “User not authorized”
 
 ## 9.3 View Sensor by ID
@@ -498,7 +498,7 @@ GET /sensors/{id}
 #### Successful - 200
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | id | Id of sensor
 String | type | Type of sensor
 
@@ -506,7 +506,7 @@ String | type | Type of sensor
 *No information is revealed by avoiding 403 unauthorized
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Contains “Sensor not found”
 
 ## 9.4 Update Sensor
@@ -515,29 +515,28 @@ PATCH /sensors/{id}
 ### Request
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | id | Id of sensor
 String | type | Type of sensor
 
 ### Response
 #### Successful - 204
 
-Type | Property | 
-Description
----|
+Type | Property | Description
+--- | --- | ---
 N/A | N/A | N/A
 
 #### Unauthorized - 404*
 *No information is revealed by avoiding 403 unauthorized
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Contains “Sensor not found”
 
 #### Request failed - 400
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Description of request failure
 
 ## 9.5 Delete Sensor
@@ -547,14 +546,14 @@ DELETE /sensor/{id}
 #### Successful - 204
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 N/A | N/A | N/A
 
 #### Unauthorized - 404*
 *No information is revealed by avoiding 403 unauthorized
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Contains “Sensor not found”
 
 # 10 Session
@@ -564,21 +563,21 @@ POST /sessions
 ### Request
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | username | Username of user
 
 ### Response
 #### Creation successful - 201
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | id | Id of session
 String | username | Username of user
 
 #### Request failed - 400
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Description of request failure
 
 ## 10.2 View All Sessions
@@ -588,7 +587,7 @@ GET /sessions
 #### Successful - 200
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 Array | sessions | Array containing session id and linked user
 String | sessions[ ]. id | Id of session
 String | sessions[ ]. username | Username of user
@@ -596,13 +595,13 @@ String | sessions[ ]. username | Username of user
 #### Request failed - 400
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Description of request failure
 
 ### Request unauthorized - 403
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Contains “User not authorized”
 
 ## 10.3 View All Sessions by User
@@ -612,7 +611,7 @@ GET /sessions/user/{username}
 #### Successful - 200
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 Array | sessions | Array containing session id and linked user
 String | sessions[ ]. id | Id of session
 String | sessions[ ]. username | Username of user
@@ -620,14 +619,14 @@ String | sessions[ ]. username | Username of user
 #### Request failed - 400
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Description of request failure
 
 #### Request failed - 404*
 *No information is revealed by avoiding 403 unauthorized
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Contains “User not found”
 
 ## 10.4 View Session by ID
@@ -637,7 +636,7 @@ GET /sessions/id/{id}
 #### Successful - 200
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | id | Id of session
 String | username | Username of user
 
@@ -645,7 +644,7 @@ String | username | Username of user
 *No information is revealed by avoiding 403 unauthorized
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Contains “Session not found”
 
 ## 10.5 Update Session
@@ -654,7 +653,7 @@ PATCH /sessions/{id}
 ### Request
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | id | Id of session
 String | username | Username of user
 
@@ -662,20 +661,20 @@ String | username | Username of user
 #### Successful - 204
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 N/A | N/A | N/A
 
 #### Unauthorized - 404*
 *No information is revealed by avoiding 403 unauthorized
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Contains “Session not found”
 
 #### Request failed - 400
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Description of request failure
 
 ## 10.6 Delete Session
@@ -685,14 +684,14 @@ DELETE /sessions/{id}
 #### Successful - 204
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 N/A | N/A | N/A
 
 #### Unauthorized - 404*
 *No information is revealed by avoiding 403 unauthorized
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Contains “Session not found”
 
 # 11 Session Sensor
@@ -702,7 +701,7 @@ POST /sessions-sensors
 ### Request
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | session_id | Id of session
 String | sensor_id | Id of sensor
 
@@ -710,7 +709,7 @@ String | sensor_id | Id of sensor
 #### Creation successful - 201
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | id | Id of session sensor
 String | session_id | Id of session
 String | sensor_id | Id of sensor
@@ -718,7 +717,7 @@ String | sensor_id | Id of sensor
 #### Request failed - 400
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Description of request failure
 
 ## 11.2 View All Sessions Sensors
@@ -728,7 +727,7 @@ GET /sessions-sensors
 #### Successful - 200
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 Array | sessions_sensors | Array containing session id and linked sensor
 String | sessions_sensors[ ]. id | Id of session sensor
 String | sessions_sensors[ ]. session_id | Id of session
@@ -737,13 +736,13 @@ String | sessions_sensors[ ]. sensor_id | Id of sensor
 #### Request failed - 400
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Description of request failure
 
 #### Request unauthorized - 403
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Contains “User not authorized”
 
 ## 11.3 View All Sensors by SessionID
@@ -753,7 +752,7 @@ GET /sessions-sensors/session/{session_id}
 #### Successful - 200
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 Array | sessions_sensors | Array containing session id and linked sensor
 String | sessions_sensors[ ]. id | Id of session sensor
 String | sessions_sensors[ ]. session_id | Id of session
@@ -762,14 +761,14 @@ String | sessions_sensors[ ]. sensor_id | Id of sensor
 #### Request failed - 400
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Description of request failure
 
 #### Request failed - 404*
 *No information is revealed by avoiding 403 unauthorized
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Contains “Session not found”
 
 ## 11.4 View Session Sensor by ID
@@ -779,7 +778,7 @@ GET /sessions-sensors/session-sensor/{id}
 #### Successful - 200
 
 Type | Property | Description
----|---|---|
+--- | --- | --
 String | id | Id of session sensor
 String | session_id | Id of session
 String | sensor_id | Id of sensor
@@ -788,7 +787,7 @@ String | sensor_id | Id of sensor
 *No information is revealed by avoiding 403 unauthorized
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Contains “Session Sensor not found”
 
 ## 11.5 Update Session Sensor
@@ -797,7 +796,7 @@ PATCH /sessions-sensors/{id}
 ### Request
 
 Type | Property | Description
----|---|---|
+--- | --- | --
 String | id | Id of session sensor
 String | session_id | Id of session
 String | sensor_id | Id of sensor
@@ -806,20 +805,20 @@ String | sensor_id | Id of sensor
 #### Successful - 204
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 N/A | N/A | N/A
 
 #### Unauthorized - 404*
 *No information is revealed by avoiding 403 unauthorized
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Contains “Session Sensor not found”
 
 #### Request failed - 400
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Description of request failure
 
 ## 11.6 Delete Session Sensor
@@ -829,14 +828,14 @@ DELETE /sessions-sensors/{id}
 #### Successful - 204
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 N/A | N/A | N/A
 
 #### Unauthorized - 404*
 *No information is revealed by avoiding 403 unauthorized
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Contains “Session Sensor not found”
 
 # 12 Session Sensor Data
@@ -846,7 +845,7 @@ POST /sessions-sensors-data
 ### Request
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | id | Id of session sensor
 String | datetime | Time of datapoint recording
 JSON | data_blob | JSON string containing formatted sensor data
@@ -855,13 +854,13 @@ JSON | data_blob | JSON string containing formatted sensor data
 #### Successful - 204
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 N/A | N/A | N/A
 
 #### Request failed - 400
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Description of request failure
 
 ## 12.2 Batch Create Datapoint
@@ -870,7 +869,7 @@ POST /sessions-sensors-data/batch
 ### Request
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 Array | datapoints | Array holding session sensor data objects
 String | datapoints[ ]. id | Id of session sensor
 String | datapoints[ ]. datetime | Time of datapoint recording
@@ -880,13 +879,13 @@ JSON | datapoints[ ]. data_blob | JSON string containing formatted sensor data
 #### Successful - 204
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 N/A | N/A | N/A
 
 #### Request failed - 400
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Description of request failure
 
 ## 12.3 View All Datapoints
@@ -896,7 +895,7 @@ GET /sessions-sensors-data
 #### Successful - 200
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 Array | datapoints | Array holding session sensor data objects
 String | datapoints[ ]. id | Id of session sensor data
 String | datapoints[ ]. datetime | Time of datapoint recording
@@ -905,13 +904,13 @@ JSON | datapoints[ ]. data_blob | JSON string containing formatted sensor data
 #### Request failed - 400
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Description of request failure
 
 #### Request unauthorized - 403
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Contains “User not authorized”
 
 ## 12.4 View All Datapoints by SessionID
@@ -921,7 +920,7 @@ GET /sessions-sensors-data/session/{session_id}
 #### Successful - 200
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 Array | datapoints | Array holding session sensor data objects
 String | datapoints[ ]. id | Id of session sensor data
 String | datapoints[ ]. datetime | Time of datapoint recording
@@ -930,14 +929,14 @@ JSON | datapoints[ ]. data_blob | JSON string containing formatted sensor data
 #### Request failed - 400
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Description of request failure
 
 #### Request failed - 404*
 *No information is revealed by avoiding 403 unauthorized
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Contains “Session not found”
 
 ## 12.4 View All Datapoints by SessionID after Datetime
@@ -947,7 +946,7 @@ GET /sessions-sensors-data/session/{session_id}/{datetime}
 #### Successful - 200
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 Array | datapoints | Array holding session sensor data objects
 String | datapoints[ ]. id | Id of session sensor data
 String | datapoints[ ]. datetime | Time of datapoint recording
@@ -957,7 +956,7 @@ JSON | datapoints[ ]. data_blob | JSON string containing formatted sensor data
 *No information is revealed by avoiding 403 unauthorized
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Contains “{request path} not found”
 
 ## 12.5 View All Datapoints by Session Sensor ID
@@ -967,7 +966,7 @@ GET /sessions-sensors-data/id/{id}
 #### Successful - 200
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 Array | datapoints | Array holding session sensor data objects
 String | datapoints[ ]. id | Id of session sensor data
 String | datapoints[ ]. datetime | Time of datapoint recording
@@ -977,7 +976,7 @@ JSON | datapoints[ ]. data_blob | JSON string containing formatted sensor data
 *No information is revealed by avoiding 403 unauthorized
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Contains “Session Sensor not found”
 
 ## 12.6 View Datapoints by ID and Datetime
@@ -987,7 +986,7 @@ GET /sessions-sensors-data/{id}/{datetime}
 #### Successful - 200
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | id | Id of session sensor
 String | datetime | Time of datapoint recording
 JSON | data_blob | JSON string containing formatted sensor data
@@ -996,7 +995,7 @@ JSON | data_blob | JSON string containing formatted sensor data
 *No information is revealed by avoiding 403 unauthorized
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Contains “Session Sensor not found”
 
 ## 12.7 Update Datapoint
@@ -1005,7 +1004,7 @@ PATCH /sessions-sensors-data/{id}/{datetime}
 ### Request
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | id | Id of session sensor
 String | datetime | Time of datapoint recording
 JSON | data_blob | JSON string containing formatted sensor data
@@ -1014,20 +1013,20 @@ JSON | data_blob | JSON string containing formatted sensor data
 #### Successful - 204
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 N/A | N/A | N/A
 
 #### Unauthorized - 404*
 *No information is revealed by avoiding 403 unauthorized
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Contains “Session Sensor not found”
 
 #### Request failed - 400
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Description of request failure
 
 ## 12.8 Delete Datapoint
@@ -1037,12 +1036,12 @@ DELETE /sessions-sensors-data/{id}/{datetime}
 #### Successful - 204
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 N/A | N/A | N/A
 
 #### Unauthorized - 404*
 *No information is revealed by avoiding 403 unauthorized
 
 Type | Property | Description
----|---|---|
+--- | --- | ---
 String | error | Contains “Session Sensor not found”
