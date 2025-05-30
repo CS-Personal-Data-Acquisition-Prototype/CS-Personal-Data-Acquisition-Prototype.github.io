@@ -47,10 +47,9 @@ client-api-lib Crate to Send Requests to Rust-TCP
 Note Taker<br>
 Database Schema<br>
 API Specification<br>
-UI Repository Setup<br>
+UI Crate Setup<br>
 Mock Data Crate<br>
 Rust-TCP Crate<br>
-Pi_Forwarder Crate<br>
 Project Website Alterations
 
 **Contact Information**<br>

@@ -114,7 +114,7 @@ Other design considerations we have accounted for with this hardware is that we 
 
 ## 3.1 Abstracted APIs
 
-Moved to [API specification document](https://docs.google.com/document/d/1tziVzWEAI0OJFBhgnmJrV8Y4_IoeSf7E4C9q4xEc57g/edit?usp=sharing).
+Moved to [API specification document](api_spec.md).
 
 ## 3.2 ER Diagram
 
