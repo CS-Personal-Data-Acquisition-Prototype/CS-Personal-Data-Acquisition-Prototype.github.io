@@ -144,11 +144,11 @@ User secrets with access | AES-256-CBC
 | --- |
 | Set-Cookie: session_id=<id>;HttpOnly;SameSite=Strict;Max-Age=3600;Path=/;Domain=<host> |
 
-This cookie configuration:
-- Blocks JavaScript access.
-- Protects against CSRF attacks.
-- Expires after 1 hour.
-- Limits the cookie’s scope to the / path and the host domain.
+This cookie configuration:<br>
+- Blocks JavaScript access.<br>
+- Protects against CSRF attacks.<br>
+- Expires after 1 hour.<br>
+- Limits the cookie’s scope to the / path and the host domain.<br>
 - Omits ‘Secure’ due to the implementation of custom encryption in place of HTTPS
 
 ## 5.4 Passwords
@@ -457,7 +457,7 @@ String | type | Type of sensor
 #### Creation successful - 201
 
 Type | Property | Description
---- | --- | --- | 
+--- | --- | ---
 String | id | Id of sensor
 String | type | Type of sensor
 
