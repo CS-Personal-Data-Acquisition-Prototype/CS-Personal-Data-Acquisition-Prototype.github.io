@@ -45,7 +45,7 @@ Our CompSci Capstone team is partnering with an ECE team to develop a complete s
 - Pi transmits low-latency data via WebSockets
 - Flexible SQLite DB can allow new sensor types
 - Scaliable TCP server utilizing pattern matching
-- Cross-platform web-based data visualizations
+- Web-based data visualizations
 - All software is written entirely in Rust
 
 ## Diagrams

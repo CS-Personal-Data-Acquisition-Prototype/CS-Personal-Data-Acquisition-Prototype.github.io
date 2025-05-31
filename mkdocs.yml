@@ -3,6 +3,7 @@ nav:
   - Home: index.md
   - Project Overview: overview.md
   - Codebase Repositories: repositories.md
+  - Building: building.md
   - Documentation:
     - Design Document: design.md
     - Requirements Document: specification.md
